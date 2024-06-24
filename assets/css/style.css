@@ -1055,25 +1055,6 @@ section {
   margin: 0;
 }
 
-.references .reference-item .quote-icon-left,
-.references .reference-item .quote-icon-right {
-  color: #c3e8fa;
-  font-size: 26px;
-}
-
-.references .reference-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.references .reference-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-}
-
 .references .reference-item p {
   font-style: italic;
   margin: 0 15px 15px 15px;
@@ -1113,6 +1094,8 @@ section {
 .references .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #149ddd;
 }
+
+
 
 /*--------------------------------------------------------------
 # Contact
@@ -1378,3 +1361,4 @@ section {
     padding-right: 20px 15px;
   }
 }
+
