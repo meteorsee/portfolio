@@ -190,6 +190,70 @@
   });
 
   /**
+   * Awards isotope and filter
+   */
+  window.addEventListener('load', () => {
+    let awardsContainer = document.querySelector('.awards-container');
+    if (awardsContainer) {
+      let awardsIsotope = new Isotope(awardsContainer, {
+        itemSelector: '.awards-item'
+      });
+  
+      let awardsFilters = document.querySelectorAll('#awards-flters li');
+  
+      awardsFilters.forEach(function(el) {
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          awardsFilters.forEach(function(filter) {
+            filter.classList.remove('filter-active');
+          });
+          this.classList.add('filter-active');
+  
+          awardsIsotope.arrange({
+            filter: this.getAttribute('data-filter')
+          });
+          awardsIsotope.on('arrangeComplete', function() {
+            AOS.refresh();
+          });
+        });
+      });
+    }
+  });
+  
+  /**
+   * Certification isotope and filter
+   */
+  window.addEventListener('load', () => {
+    let certificationContainer = document.querySelector('.certification-container');
+    if (certificationContainer) {
+      let certificationIsotope = new Isotope(certificationContainer, {
+        itemSelector: '.certification-item'
+      });
+  
+      let certificationFilters = document.querySelectorAll('#certification-flters li');
+  
+      certificationFilters.forEach(function(el) {
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          certificationFilters.forEach(function(filter) {
+            filter.classList.remove('filter-active');
+          });
+          this.classList.add('filter-active');
+  
+          certificationIsotope.arrange({
+            filter: this.getAttribute('data-filter')
+          });
+          certificationIsotope.on('arrangeComplete', function() {
+            AOS.refresh();
+          });
+        });
+      });
+    }
+  });
+  
+  
+
+  /**
    * Initiate portfolio lightbox 
    */
   const portfolioLightbox = GLightbox({
